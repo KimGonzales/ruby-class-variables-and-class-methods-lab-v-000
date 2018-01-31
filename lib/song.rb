@@ -11,6 +11,8 @@ class Song
     @artist= artist
     @genre = genre
     @@count += 1
+    @@genres << genre
+    @@artists << artist
   end
 
 
@@ -18,7 +20,19 @@ class Song
     @@count
   end
 
+  def self.genres
+    @@genres.uniq
+  end
+
   def self.artists
-    artists << artist
+    @@artists.uniq
+  end
+
+  def self.genre_count
+      #iterate through the @@array. if the genre is the first/only one of that type in the array, make the key the genre name and
+      #increment the number value by 1. If it is not unique, then do not make a new key and increment that genre value by 1.\
+      value = 0
+      @@genres each do | genre |
+        if genre
   end
 end
