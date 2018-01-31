@@ -31,8 +31,14 @@ class Song
   def self.genre_count
       #iterate through the @@array. if the genre is the first/only one of that type in the array, make the key the genre name and
       #increment the number value by 1. If it is not unique, then do not make a new key and increment that genre value by 1.\
-      # value = 0
-      # @@genres each do | genre |
-      #   if genre
+# @@genres =["rap", "rap", "pop"]
+      value = 0
+      genre_hash = {}
+      genre = nil
+      @@genres.each do | i |
+         if i !=genre[i]
+           genre_hash[i] = value +=1
+         else
+          
   end
 end
