@@ -39,6 +39,8 @@ class Song
          if i !=genre[i]
            genre_hash[i] = value +=1
          else
-          
+
+         end
+       end
   end
 end
