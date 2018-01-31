@@ -32,14 +32,12 @@ class Song
       #iterate through the @@array. if the genre is the first/only one of that type in the array, make the key the genre name and
       #increment the number value by 1. If it is not unique, then do not make a new key and increment that genre value by 1.\
 # @@genres =["rap", "rap", "pop"]
-      value = 0
       genre_hash = {}
-      genre = nil
-      @@genres.each do | i |
-         if i !=genre[i]
-           genre_hash[i] = value +=1
+      @@genres.each do | genre |
+         if !genre_hash[genre]
+            genre_hash[genre] = 1
          else
-
+           genre_hash[genre] +=1
          end
        end
   end
