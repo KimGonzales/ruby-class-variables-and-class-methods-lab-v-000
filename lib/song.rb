@@ -45,12 +45,12 @@ class Song
        @@artists.each do |artist|
          if !artist_count[0]
            @aartist[artist] = 1
-         else 
+         else
            @@artist[artist] += 1
          end
        end
        artist_count
      end
 
-     
+
 end
